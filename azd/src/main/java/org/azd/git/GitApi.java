@@ -885,27 +885,27 @@ public class GitApi extends AzDAsyncApi<GitApi> implements GitDetails {
                                  GitVersionOptions itemVersionOptions, GitVersionType itemVersionType) throws AzDException {
         var q = new HashMap<String, Object>() {{
             put("$top", top);
-            put("$skip", skip);
-            put("author", author);
-            put("compareVersion.version", version);
-            put("compareVersion.versionOptions", versionOptions.toString().toLowerCase());
-            put("compareVersion.versionType", versionType.toString().toLowerCase());
-            put("excludeDeletes", excludeDeletes);
-            put("fromCommitId", fromCommitId);
+            //put("$skip", skip);
+            //put("author", author);
+            //put("compareVersion.version", version);
+            //put("compareVersion.versionOptions", versionOptions.toString().toLowerCase());
+            //put("compareVersion.versionType", versionType.toString().toLowerCase());
+            //put("excludeDeletes", excludeDeletes);
+            //put("fromCommitId", fromCommitId);
             put("fromDate", fromDate);
-            put("historyMode", historyMode.toString().toLowerCase());
-            put("ids", String.join(",", ids));
-            put("includeLinks", includeLinks);
-            put("includePushData", includePushData);
-            put("includeUserImageUrl", includeUserImageUrl);
-            put("itemPath", itemPath);
+            //put("historyMode", historyMode.toString().toLowerCase());
+            //put("ids", String.join(",", ids));
+            //put("includeLinks", includeLinks);
+            //put("includePushData", includePushData);
+            //put("includeUserImageUrl", includeUserImageUrl);
+            //put("itemPath", itemPath);
             put("itemVersion.version", itemVersion);
-            put("itemVersion.versionOptions", itemVersionOptions.toString().toLowerCase());
-            put("itemVersion.versionType", itemVersionType.toString().toLowerCase());
-            put("showOldestCommitsFirst", showOldestCommitsFirst);
-            put("toCommitId", toCommitId);
-            put("toDate", toDate);
-            put("user", user);
+            //put("itemVersion.versionOptions", itemVersionOptions.toString().toLowerCase());
+            //put("itemVersion.versionType", itemVersionType.toString().toLowerCase());
+            //put("showOldestCommitsFirst", showOldestCommitsFirst);
+            //put("toCommitId", toCommitId);
+            //put("toDate", toDate);
+            //put("user", user);
         }};
 
         String r = send(RequestMethod.GET, CONNECTION, GIT, CONNECTION.getProject(), AREA + "/repositories",
